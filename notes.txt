@@ -1,23 +1,22 @@
-################################################################################
-# General
-################################################################################
- - VEEERY whitespace sensitive, i.e. tabs, spaces, new lines matter (a lot)
- - comments:
-    - use -- for single line comments
-    - use {--} for multiline comments
-    - only for human-readable text!
- - everything is a function here!
-    - read the following: a = 5 (a :: Int)
-    - a++, ++a <- invalid. use (a + 1)
- - use camel case to name identifiers, i.e. myFunction
- - #include ... (C++) -> import ... (Haskell)
- - when passing negative numbers as parameters surround them in brackets
-    - example: helper (-1)
+###################################################################################################
+# Week_01 - Recursion (part 1)
+###################################################################################################
+
+- VEEERY whitespace sensitive, i.e. tabs, spaces, new lines matter (a lot)
+- comments:
+   - use -- for single line comments
+   - use {--} for multiline comments
+   - only for human-readable text!
+- everything is a function here!
+   - read the following: a = 5 (a :: Int)
+   - a++, ++a <- invalid. use (a + 1)
+- use camel case to name identifiers, i.e. myFunction
+- #include ... (C++) -> import ... (Haskell)
+- when passing negative numbers as parameters surround them in brackets
+   - example: helper (-1)
 
 
-################################################################################
-# Types
-################################################################################
+Types
  * Important: 1. All types start with a capital letter!
               2. All types must be known at compile time! (strongly typed language; not the dynamic programming principles)
               3. If f returns Int, then f cannot return Double! (staticly typed language)
@@ -35,9 +34,7 @@
  - String   -> equavalent to std::string and const char* in C++ (ex. "Haskell")
 
 
-################################################################################
-# Built-in Functions
-################################################################################
+Built-in Functions
  - boolean logical operators: && || not
 
  - artimetic:  +, -, * (Only for variables of the same type, i.e. n * m will give an error if n is Int and m - Double)
@@ -78,25 +75,20 @@
        of a function   of a function
 
 
-################################################################################
-# What is a predicate?
-################################################################################
-
-Definition: A predicate is a function that returns Bool.
+What is a predicate?
+   A predicate is a function that returns Bool.
 
 
-################################################################################
-# Types of Evaluation Processes
-################################################################################
+Types of Evaluation Processes
 
-Linearly Recursive:
-   1. The result is stored in a recursive tail.
-   2. The recursive call is part of an expression.
+   Linearly Recursive:
+      1. The result is stored in a recursive tail.
 
-Linearly Iterative:
-   1.The result is stored as a variable that is part of ANOTHER function.
-   Often the variable is named "result" and the function - "helper".
-   
-   2. The recursive call is not part of an expression.
-   - these processes are faster than the linearly recursive ones!
+      2. The recursive call is part of an expression.
 
+   Linearly Iterative:
+      1.The result is stored as a variable that is set by ANOTHER function.
+      Often the variable is named "result" and the function - "helper".
+      
+      2. The recursive call is not part of an expression.
+      These processes are faster than the linearly recursive ones!
