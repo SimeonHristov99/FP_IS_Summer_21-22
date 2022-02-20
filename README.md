@@ -15,7 +15,6 @@
 - Book (read chapters [1 .. 8]): <http://learnyouahaskell.com/chapters>
 - Library for working with lists (Data.List): <https://hackage.haskell.org/package/base-4.12.0.0/docs/Data-List.html>
 - Library for working with characters/digits (Data.Char): <https://hackage.haskell.org/package/base-4.12.0.0/docs/Data-Char.html>
-- Install Haskell: <https://www.youtube.com/watch?v=gLr2u6CjSsM> (<https://www.haskell.org/platform/windows.html>)
 - Youtube channel (beginner to advanced): <https://www.youtube.com/channel/UC3xdLFFsqG701QAyGJIPT1g/videos>
 - Youtube channel (advanced): <https://www.youtube.com/c/Tsoding/videos>
 - LEARN HASKELL IN 1 HOUR: <https://www.youtube.com/watch?v=02_H3LjqMr8>
