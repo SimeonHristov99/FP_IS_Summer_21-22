@@ -16,7 +16,6 @@ Define functions that return:
     Test cases:
 
         print $ min 5 6 == 5
-        print $ minIf (-60) (-15) == (-60)
         print $ minIf 15 60 == 15
         print $ minIf 60 15 == 15
         print $ minGuard 15 60 == 15
