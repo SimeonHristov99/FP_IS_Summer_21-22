@@ -79,6 +79,11 @@ What is a predicate?
    A predicate is a function that returns Bool.
 
 
+Conditions:
+   if ... then ... else
+   guards. Often denoted by the pipe symbol (|). The equivalent of a switch case in C++. 
+
+
 Types of Evaluation Processes
 
    Linearly Recursive:

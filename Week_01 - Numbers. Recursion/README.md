@@ -11,23 +11,23 @@ Define functions that return:
   - using if-else;
   - using guards;
   - using a built-in function.
-- the last digit of a number.
-- the quotient of the division of two whole numbers.
-- the quotient and remainder of the division of two whole numbers.
-- a whole number without its last digit.
-- the quotient and remainder of the division of two real numbers.
-- the quotient of the division of two real numbers.
-- the average of two whole numbers.
-- the number rounded to the second digit after the ".".
+- the last digit of a number
+- the quotient of the division of two whole numbers
+- the quotient and remainder of the division of two whole numbers
+- a whole number without its last digit
+- the quotient and remainder of the division of two real numbers
+- the quotient of the division of two real numbers
+- the average of two whole numbers
+- the number rounded to the second digit after the "."
 
 Test cases:
 
-        print $ min 5 6 == 5
-        print $ minIf 15 60 == 15
-        print $ minIf 60 15 == 15
-        print $ minGuard 15 60 == 15
-        print $ minGuard 60 15 == 15
-        print $ minBuiltIn 60 15 == 15
+    print $ min 5 6 == 5
+    print $ minIf 15 60 == 15
+    print $ minIf 60 15 == 15
+    print $ minGuard 15 60 == 15
+    print $ minGuard 60 15 == 15
+    print $ minBuiltIn 60 15 == 15
 
     print $ lastDigit 154 == 4
 
@@ -46,20 +46,25 @@ Test cases:
 
 # Task 2
 
-Define a predicate *isInside a b x* that checks whether a number *x* is in an interval [*a*, *b*].
+Define a predicates that check:
 
-- solve with lists;
-- solve using a lambda and boolean expressions.
+- whether two numbers are not equal:
+  - **in one line without** using if-else;
+  - using guards.
+- whether a whole number *x* is between two whole numbers - *a* and *b* **in one line without** using if-else.
 
 Test cases:
 
-    print $ isInsideLists 5 1 4 == True
-    print $ isInsideLists 10 50 20 == True
-    print $ isInsideLists 10 50 1 == False
+    print $ areNotEqualOneLine 5 2 == True
+    print $ areNotEqualOneLine 5 5 == False
 
-    print $ isInsideLambda 5 1 4 == True
-    print $ isInsideLambda 10 50 20 == True
-    print $ isInsideLambda 10 50 1 == False
+    print $ areNotEqualGuards 5 2 == True
+    print $ areNotEqualGuards 5 5 == False
+    
+    print $ inside 1 5 4 == True -- a = 1, b = 5, x = 4
+    print $ inside 5 1 4 == True
+    print $ inside 10 50 20 == True
+    print $ inside 10 50 1 == False
 
 # Task 3
 
@@ -204,7 +209,6 @@ Implementation detail:
 
     Use guards.
 
-
 Test cases:
 
     print $ canCarry 5 15 3 == "Yes"
@@ -251,7 +255,7 @@ Explanations:
     After night 8 --> 720
     After day 9   --> 820
     After night 9 --> 810
-    After day 10  --> 910 
+    After day 10  --> 910
 
 - for upSpeed = 10, downSpeed = 9 and desiredHeight = 4, the output should be 1.
 
