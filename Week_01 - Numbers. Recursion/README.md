@@ -81,7 +81,7 @@ Test cases:
 
 Define a recursive and an iterative function for calculating the number at index *i* in the Fibonacci sequence (0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ...).
 
-> **Note**: The input will always be valid, i.e. greater than -1.
+> **Implementation detail**: The input will always be valid, i.e. greater than -1.
 
 Test cases:
 
@@ -136,7 +136,7 @@ Test cases:
 
 Define a function for calculating the GCD of two whole numbers.
 
-> **Implementation detail**: Normally, you would use the built-in function `gcd`.
+> **Note**: Normally, you would use the built-in function `gcd`.
 
 - solve using guards;
 - solve using pattern matching; <- The preferred way!
