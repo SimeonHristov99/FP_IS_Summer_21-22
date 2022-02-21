@@ -71,7 +71,6 @@ Define a recursive and an iterative function for calculating the factorial of a 
 
 Test cases:
 
-    print $ factXs 11 == 39916800
     print $ factRec 11 == 39916800
     --print $ factRec (-11) -- error: x was negative
     print $ factIter 11 == 39916800
