@@ -1,7 +1,3 @@
-# Task 0
-
-Write and explain the `Hello, world!` function.
-
 # Task 1
 
 Define functions that return:
@@ -70,7 +66,6 @@ Test cases:
 
 Define a recursive and an iterative function for calculating the factorial of a non-negative number.
 
-- solve with lists;
 - solve with a linearly recursive process;
 - solve using a linearly iterative process.
 
@@ -103,15 +98,15 @@ Define two predicates that return whether a number is even:
 - using if-else;
 - using guards. <- The preferred way!
 
-    Test cases:
+Test cases:
 
-        print $ isEvenIf 2 == "Yes"
-        print $ isEvenIf 15452 == "Yes"
-        print $ isEvenIf 321 == "No"
+    print $ isEvenIf 2 == "Yes"
+    print $ isEvenIf 15452 == "Yes"
+    print $ isEvenIf 321 == "No"
 
-        print $ isEvenGuards 2 == "Yes"
-        print $ isEvenGuards 15452 == "Yes"
-        print $ isEvenGuards 321 == "No"
+    print $ isEvenGuards 2 == "Yes"
+    print $ isEvenGuards 15452 == "Yes"
+    print $ isEvenGuards 321 == "No"
 
 # Task 2
 
@@ -120,13 +115,13 @@ Define two functions that return the sum of the cubes of two **whole** numbers:
 - using a power operator;
 - **without** using a power operator.
 
-    Test cases:
+Test cases:
 
-        print $ sumCubesPow 5 1 == 126
-        print $ sumCubesPow 10 50 == 126000
-    
-        print $ sumCubesNoPow 5 1 == 126
-        print $ sumCubesNoPow 10 50 == 126000
+    print $ sumCubesPow 5 1 == 126
+    print $ sumCubesPow 10 50 == 126000
+
+    print $ sumCubesNoPow 5 1 == 126
+    print $ sumCubesNoPow 10 50 == 126000
 
 # Task 3
 
@@ -237,31 +232,31 @@ Explanations:
 
 - for upSpeed = 100, downSpeed = 10 and desiredHeight = 910, the output should be 10.
 
-    After day 1   --> 100
-    After night 1 --> 90
-    After day 2   --> 190
-    After night 2 --> 180
-    After day 3   --> 280
-    After night 3 --> 270
-    After day 4   --> 370
-    After night 4 --> 360
-    After day 5   --> 460
-    After night 5 --> 450
-    After day 6   --> 550
-    After night 6 --> 540
-    After day 7   --> 640
-    After night 7 --> 630
-    After day 8   --> 730
-    After night 8 --> 720
-    After day 9   --> 820
-    After night 9 --> 810
-    After day 10  --> 910
+        After day 1   --> 100
+        After night 1 --> 90
+        After day 2   --> 190
+        After night 2 --> 180
+        After day 3   --> 280
+        After night 3 --> 270
+        After day 4   --> 370
+        After night 4 --> 360
+        After day 5   --> 460
+        After night 5 --> 450
+        After day 6   --> 550
+        After night 6 --> 540
+        After day 7   --> 640
+        After night 7 --> 630
+        After day 8   --> 730
+        After night 8 --> 720
+        After day 9   --> 820
+        After night 9 --> 810
+        After day 10  --> 910
 
 - for upSpeed = 10, downSpeed = 9 and desiredHeight = 4, the output should be 1.
 
-    Because the plant reaches the desired height at day 1 (10 meters).
+        Because the plant reaches the desired height at day 1 (10 meters).
 
-    After day 1 --> 10
+        After day 1 --> 10
 
 # Task 8
 
