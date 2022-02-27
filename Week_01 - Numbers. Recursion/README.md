@@ -71,7 +71,6 @@ Define a recursive and an iterative function for calculating the factorial of a 
 
 Test cases:
 
-    print $ factXs 11 == 39916800
     print $ factRec 11 == 39916800
     --print $ factRec (-11) -- error: x was negative
     print $ factIter 11 == 39916800
@@ -136,7 +135,7 @@ Test cases:
 
 Define a function for calculating the GCD of two whole numbers.
 
-> **Implementation detail**: Normally, you would use the built-in function `gcd`.
+> **Note**: Normally, you would use the built-in function `gcd`.
 
 - solve using guards;
 - solve using pattern matching; <- The preferred way!
