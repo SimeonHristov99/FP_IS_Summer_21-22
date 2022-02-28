@@ -110,6 +110,10 @@ Test cases:
     print $ countDigitsIter 12345 == 5
     print $ countDigitsIter 123 == 3
 
+    --print $ countDigitsRec (-13) -- error "n was negative"
+    print $ countDigitsRec 12345 == 5
+    print $ countDigitsRec 123 == 3
+
 # Task 2
 
 Define **an iterative** function for calculating the sum of the digits of a non-negative number.
