@@ -97,3 +97,12 @@ Types of Evaluation Processes
       
       2. The recursive call is not part of an expression.
       These processes are faster than the linearly recursive ones!
+
+
+###################################################################################################
+# Week_02 - Recursion (part 1)
+###################################################################################################
+
+FOR HOME:
+   WARNING:
+      Getting a "Yes", does not mean getting a bonus!
