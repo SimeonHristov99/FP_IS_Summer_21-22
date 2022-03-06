@@ -205,6 +205,7 @@ Test cases:
     print $ removeD 0 606 == 66
     print $ removeD 0 600 == 6
     print $ removeD 6 600 == 0
+    print $ removeD 2 1234 == 134
 
 # Task 9
 

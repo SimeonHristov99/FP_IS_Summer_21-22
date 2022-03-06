@@ -105,4 +105,19 @@ Types of Evaluation Processes
 
 FOR HOME:
    WARNING:
-      Getting a "Yes", does not mean getting a bonus!
+      Getting a "Yes" does not mean getting a bonus!
+
+################################################################################
+# Week_03 - Recursion (part 2)
+################################################################################
+
+Closure:
+   Everything in a where clause.
+
+Type Inference - The Declaration Can Be Skipped
+ - What is a declaration?
+ - What is a definition?
+ - The The Glasgow Haskell Compiler (GHC) can "guess" the types of every function
+     - this ability is called type inference
+ - fname :: [type1 -> type2 -> ... ->]returnType     <= This is not needed
+
