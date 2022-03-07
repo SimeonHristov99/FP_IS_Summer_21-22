@@ -24,8 +24,7 @@ Test cases:
 
 Define a function that accepts two whole numbers *x* and *n* and calculates the following sum **via a linearly iterative process**:
 
-$$ 1 + x + x^2 + x^3 + ... + x^n $$
-
+    1 + x + x^2 + x^3 + ... + x^n
 
 Test cases:
 
