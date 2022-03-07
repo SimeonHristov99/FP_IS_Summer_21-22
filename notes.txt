@@ -120,4 +120,3 @@ Type Inference - The Declaration Can Be Skipped
  - The The Glasgow Haskell Compiler (GHC) can "guess" the types of every function
      - this ability is called type inference
  - fname :: [type1 -> type2 -> ... ->]returnType     <= This is not needed
-
