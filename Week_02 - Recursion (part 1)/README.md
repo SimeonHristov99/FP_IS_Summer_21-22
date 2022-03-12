@@ -143,6 +143,7 @@ Define a function that returns the number of occurrences of a given digit in a g
 Test cases:
 
     print $ countOccurences 121 1 == 2
+    print $ countOccurences 222 1 == 0
 
 # Task 5
 
