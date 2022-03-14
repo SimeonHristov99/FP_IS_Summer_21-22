@@ -65,7 +65,7 @@ Implementation detail:
 
 Test cases:
 
-    print $ inside 1 5 4 == True -- n = 1, x = 5, y = 4
+    print $ inside 1 5 4 == True -- x = 1, y = 5, n = 4
     print $ inside 5 1 4 == True
     print $ inside 10 50 20 == True
     print $ inside 10 50 1 == False
@@ -254,7 +254,7 @@ Test cases:
 
 # Task 5
 
-Define a function that checks whether the digits of a non-negative number are ordered in non-decreasing order. The implementation should be one **ONE** line and must **NOT** include *div* or *mod*.
+Define a function that checks whether the digits of a non-negative number are ordered in non-decreasing order. The implementation should be on **ONE** line and must **NOT** include *div* or *mod*.
 
 Test cases:
 
