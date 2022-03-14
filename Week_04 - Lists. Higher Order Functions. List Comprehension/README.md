@@ -61,7 +61,7 @@ Write a predicate that checks whether a number n is between two numbers - x and 
 
 Implementation detail:
 
-    Solve the task in one line of code.
+    Solve the task in one line of code using lists.
 
 Test cases:
 
