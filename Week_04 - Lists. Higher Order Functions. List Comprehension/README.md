@@ -271,9 +271,11 @@ Define a function that returns the sum of the first *n* prime numbers that conta
 Implementation detail:
 
     Solve using higher order functions in ONE line of code.
-
+   
 Test cases:
 
     print $ sumSpecialPrimes 5 2 == 392 -- n = 5, d = 2
     print $ sumSpecialPrimes 5 3 == 107
     print $ sumSpecialPrimes 10 3 == 462
+
+> **Hint**: You can define an infinite list by using this construction: [1 .. ]. This defines a list with no upper bound. Now, use functions such as 'take' and 'drop' (refer to them in 'notes.txt') to get only the first 'n' numbers that satisfy the condition. For example: take ??? [1 .. ].
