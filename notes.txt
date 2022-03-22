@@ -261,26 +261,26 @@ Lambda Expressions
       - (\ <parameters> -> <function application>)
 
    - a lambda that adds 5 to a number:
-   ???
+   (\ x -> x + 5 )
 
    - a lambda-predicate that checks whether a number is greater than 10:
-   ???
+   (\ x -> x > 10)
 
    - a lambda which adds three numbers:
-   ???
+   (\ x y z -> x + y + z)
 
    - What is an unary function?
-      ???
+      Function that accepts 1 argument.
    - What is a binary function?
-      ???
+      Function that accepts 2 arguments.
    - Can you give examples?
-      unary: ???
-      binary: ???
+      unary: isPrime
+      binary: div, mod, +, *
    
    - Remember: The evaluation happens from LEFT TO RIGHT.
 
 Function Composition
-   Composition of f and g over x: ???
+   Composition of f and g over x: f (g x)
 
 Tuples (Vectors) (Ordered pairs)
 
