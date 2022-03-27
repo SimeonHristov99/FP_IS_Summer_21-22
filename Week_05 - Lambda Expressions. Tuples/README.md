@@ -171,7 +171,7 @@ Test cases:
 
 # Task 3
 
-Define a function that returns the sum of the special numbers in the interval [a, b] (a <= b). A number is special if it contains 6 and can be expressed as 4k + 1, where k is a whole number.
+Define a function that returns the sum of the special numbers in the interval [x, y] (x <= y). A number is special if it contains 6 and can be expressed as 4k + 1, where k is a whole number.
 
 > **Implementation detail**: Solve the task with one line of code.
 
