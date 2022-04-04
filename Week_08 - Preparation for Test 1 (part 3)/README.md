@@ -2,6 +2,23 @@
 
 Resolve test 1 from 2020.
 
+Test cases:
+
+    -- Task 1
+    print $ checkSequence [2, 9, 15] == True
+    print $ checkSequence [11, 14, 20, 27, 31] == True
+    print $ checkSequence [11, 14, 28, 27, 31] == False
+    print $ checkSequence [11, 14, 14, 29, 31] == False
+
+    -- Task 2
+    print $ removNb 26 == [(15,21),(21,15)]
+    print $ removNb 100 == []
+    print $ removNb 101 == [(55,91),(91,55)]
+
+    -- Task 3
+    print $ liesOn (line (0, 0) (1, 1)) (5.5, 5.5) == True
+    print $ liesOn (line (0, 0) (1, 1)) (0.5, 0) == False
+
 # Task 4
 
 Define a function that accepts a natural number greater than 1 and returns a sorted list of prime factors the product of which gives the number.
