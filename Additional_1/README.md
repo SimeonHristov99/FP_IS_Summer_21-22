@@ -126,11 +126,9 @@ Test case:
 
 # Tasks 11 ..
 
-Open and solve "test1_2021.pdf" and "test1_2020.pdf".
+Open and solve "test1_2021.pdf".
 
 Test cases:
-
-    -- test1_2021.pdf
 
     -- Task 1
     print $ sumOfEvenly 1 10 == 41
@@ -161,20 +159,3 @@ Test cases:
     print $ scoreHand ["A","A"] == 12
     print $ scoreHand ["A", "10", "A"] == 12
     print $ scoreHand ["A","2","A","9","9"] == 22
-
-
-    -- test1_2020.pdf
-
-    -- Task 1
-    print $ checkSequence [2, 9, 15] == True
-    print $ checkSequence [11, 14, 20, 27, 31] == True
-    print $ checkSequence [11, 14, 28, 27, 31] == False
-    print $ checkSequence [11, 14, 14, 29, 31] == False
-
-    -- Task 2
-    print $ removNb 26 == [(15,21),(21,15)]
-    print $ removNb 100 == []
-    print $ removNb 101 == [(55,91),(91,55)]
-
-    -- Task 3
-    -- construct it
