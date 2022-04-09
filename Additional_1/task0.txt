@@ -1,20 +1,20 @@
 1. Дефинирайте функция на езика Haskell, която генерира итеративен изчислителен процес. Обяснете каква задача
 се решава с помощта на тази функция.
-    Topic: ???
-    Slides: ???
+    Topic: 2
+    Slides: 43
 
     Example:
-    ???
+    in task0.hs factRec && factIter
 
 2. Опишете общия вид на дефиниция на функция с условия (guards) в езика Haskell и процеса на оценяване на
 обръщение към такава функция.
-    Topic: ???
-    Slides: ???
+    Topic: 2
+    Slides: 24, 27
 
 3. Как се конструира списък чрез техниката на определяне на неговия обхват (list comprehension) в езика Haskell?
 Обяснете общия случай и дайте поне два примера (в т.ч. посочете оценките на изразите от Вашите примери).
-    Topic: ???
-    Slides: ???
+    Topic: 2
+    Slides: 56
 
 4. Кои от следните конструкции са коректно дефинирани (валидни) списъци в Haskell? Посочете типовете на
 валидните списъци, а за останалите обяснете защо не са валидни.
@@ -24,36 +24,44 @@
     (в) [(345,”Hello”),(3456,”Hello”,”World”)]
     (г) [[”123”,”Hello”],[”1245”,”Hello”,”World”]]
 
-    Answer(s): ???
+    Answer(s):
+        a <= invalid, because many types
+        б <= valid [[[Int]]]
+        в <= invalid, because vectors have different sizes
+        г <= valid [[[Char]]]
 
 5. Дайте пример за дефиниция на функция на Haskell, в която се използва обща (а не примитивна) рекурсия върху списъци.
 Обяснете каква задача се решава с помощта на тази функция.
-    Topic: ???
-    Slides: ???
+    Topic: 5
+    Slides: 16, 28, 33
 
     Primitive:
-        1. ???
-        2. ???
-        3. ???
+        1. Only one list.
+        2. The base case is the empty list.
+        3. One recursive call to the end of the list.
 
     General:
-        1. ???
-        2. ???
-        3. ???
+        1. More than one list.
+        2. The base does not depend on the list(s).
+        3. More than one recursive call.
 
 6. Обяснете действието на функцията foldr в езика Haskell. Дайте поне два примера.
-    Topic: ???
-    Slides: ???
+    Topic: 7
+    Slides: 21, 22, 23, 24, 25, 26
 
 7. Обяснете понятието "оператор" в езика Haskell. Какви свойства имат операторите? Дайте пример за дефиниция на
 оператор, придружена от спецификация на неговите свойства.
-    Topic: ???
-    Slides: ???
+    Topic: 3
+    Slides: 2, 3, 10
 
 8. Обяснете понятието „образец“ (pattern) в Haskell. Дайте примери за поне три типа образци и формулирайте
 правилата за успешното им съпоставяне със съответните аргументи.
-    Topic: ???
-    Slides: ???
+    Topic: 5
+    Slides: 5, 6
 
     Examples:
-    ???
+    f 0 n = n -- literal
+    f 0 _ = 0 -- literal + wildcard
+    f (x:xs) = x -- constructor
+    f [] = error "empty list" -- constructor
+    f (x, y) = x -- vector
