@@ -5,8 +5,8 @@ main = do
     print $ closestToAverage db1 == "cheese"
     print $ closestToAverage db2 == "butter"
     
-    -- print $ cheaperAlternative db1 == 0
-    -- print $ cheaperAlternative db2 == 1
+    print $ cheaperAlternative db1 == 0
+    print $ cheaperAlternative db2 == 1
 
 type Product = (String, Double)
 type StoreAvailability = [Product]
@@ -25,3 +25,12 @@ closestToAverage db = foldl1 (\ nx ny -> if (abs $ getAvgPr nx - getAvg db) > (a
      getAvgPr name = sum costsForProduct / (fromIntegral $ length costsForProduct )
       where
           costsForProduct = [ c | (n, c) <- db, n == name]
+
+cheaperAlternative :: StoreAvailability -> Int
+cheaperAlternative db = sum $ map moreThanMin $ nub $ map fst db
+ where
+     moreThanMin :: String -> Int
+     moreThanMin pName = length $ filter (/= minimum prices) prices
+      where
+          prices = [ cPrice | (cName, cPrice) <- db, cName == pName]
+    
