@@ -6,11 +6,15 @@ Given a directed graph *g* with edges `[(1, 2), (1, 3), (2, 3), (2, 4)]` define 
     neighbours - accepts a node and returns its neighbours;
     adjacencyList - returns the children of every parent.
 
+> **Implementation detail**: Create types for the graph structure.
+
 Test cases:
 
     print $ nodes [(1, 2), (1, 3), (2, 3), (2, 4)] == [1, 2, 3, 4]
-    print $ neighbours [(1, 2), (1, 3), (2, 3), (2, 4)] 2 == [3, 4]
-    print $ neighbours [(1, 2), (1, 3), (2, 3), (2, 4)] 4 == []
+
+    print $ neighbours 2 [(1, 2), (1, 3), (2, 3), (2, 4)] == [3, 4]
+    print $ neighbours 4 [(1, 2), (1, 3), (2, 3), (2, 4)] == []
+    
     print $ adjacencyList [(1, 2), (1, 3), (2, 3), (2, 4)] == [(1, [2, 3]), (2, [3, 4]), (3, []), (4, [])]
 
 ## Task 2
