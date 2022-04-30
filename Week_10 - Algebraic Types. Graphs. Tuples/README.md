@@ -149,7 +149,7 @@ print $ getClosestDistance [(TwoD 4 6), (TwoD 5 10), (TwoD 5 29), (TwoD 1 45), (
 
 # Task 4
 
-Define a function that returns all the uncles of a node in a tree. An uncle is a brother/sister of a parent.
+Define a function that returns all the uncles of a node in a tree. An uncle is a brother of a parent.
 
 ![Alt text](assets/t.png?raw=true "t.png")
 
