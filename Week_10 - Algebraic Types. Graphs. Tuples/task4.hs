@@ -7,6 +7,30 @@ main = do
     print $ getPresident "Fox" db == "Ted Turner"
     print $ getPresident "USA Entertainm." db == "Stephen Spielberg"
 
+-- [ actorName | (Movie titleM year _ studio _) <- ms, (StarsIn actorName title) <- si, title == titleM && studoName == studio && movieYear == year ]
+getFeaturedStars :: Name -> Year -> MovieDB -> [Name]
+getFeaturedStars studoName movieYear (ms, _, si, _, _) = concatMap getActors getMovies
+ where
+     getMovies :: [Title]
+     getMovies = map (\ (Movie title _ _ _ _) -> title) $ filter (\ (Movie title year _ studio _) -> studoName == studio && movieYear == year) ms
+    --  getMovies = [ title | (Movie title year _ studio _) <- ms, studoName == studio && movieYear == year ]
+
+     getActors :: Title -> [Name]
+     getActors movie = map (\ (StarsIn actorName _) -> actorName) $ filter (\ (StarsIn _ title) -> title == movie) si
+    --  getActors movie = [ actorName | (StarsIn actorName title) <- si, title == movie ]
+
+getPresident :: Name -> MovieDB -> Name
+getPresident studioName (_, _, _, ss, mes) = getName' getId'
+ where
+     getId = head [ pId | (Studio name pId) <- ss, name == studioName ]
+     getId' = head $ map (\ (Studio _ pId) -> pId) $ filter (\ (Studio name _) -> name == studioName) ss
+     
+     getName id = head [ name | (MovieExec name pId _) <- mes, pId == id ]
+     getName' id = head $ map (\ (MovieExec name _ _) -> name) $ filter (\ (MovieExec _ pId _) -> pId == id) mes
+
+-- ["film1", "film2"]
+-- concat $ map [[], []]
+
 type Name = String
 type Title = String
 type Address = String

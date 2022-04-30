@@ -1,6 +1,22 @@
+import Data.List
+
 main :: IO()
 main = do
-    print $ getSunk database == [("Guadalcanal",["Kirishima"]),("North Atlantic",["Bismarck","Hood"]),("North Cape",["Schamhorst"]),("Surigao Strait",["Yamashiro","Fuso"])]
+    print $ getSunk database == [("Guadalcanal",["Kirishima"]),("North Atlantic",["Bismarck","Hood"]),("North Cape",["Schamhorst"]),("Surigao Strait",["Fuso","Yamashiro"])]
+
+getSunk :: Database -> [(Name, [Name])]
+getSunk (os, bs, ss) = [ (name, getSunkShips name) | name <- allBattleNames ]
+ where
+     allBattleNames :: [Name]
+     allBattleNames = [ name | (Battle name _) <- bs ]
+
+     allBattleNames' :: [Name]
+     allBattleNames' = nub [ bN | (Outcome _ bN _) <- os ]
+
+     getSunkShips :: Name -> [Name]
+     getSunkShips battleName = [ ship | (Outcome ship bN result) <- os, result == "sunk" && bN == battleName ]
+
+
 
 type Name = String
 type Date = String
