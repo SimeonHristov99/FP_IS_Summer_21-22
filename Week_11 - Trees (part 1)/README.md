@@ -169,7 +169,7 @@ Use the following types:
 
 Test case:
 
-    print $ minDepthGreenNode colorTree == 3
+    print $ minDepthGreenNode colorTree == 2
 
 # Task 3
 
