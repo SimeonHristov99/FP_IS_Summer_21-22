@@ -173,7 +173,7 @@ Test case:
 
 # Task 3
 
-The nodes in the following picture resemple the lower and higher bounds of an interval (the first number will always be lower than the second). Define a function that checks whether such a binary tree is ordered according to the relation *subinterval*.
+The nodes in the following picture resemple the lower and higher bounds of an interval (the first number will always be lower than the second). Define a function that checks whether such a binary tree is ordered according to the relation *length of interval*.
 
 ![Alt text](assets/task11_1.png?raw=true "task11_1.png")
 
