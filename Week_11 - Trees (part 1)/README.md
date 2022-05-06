@@ -173,7 +173,7 @@ Test case:
 
 # Task 3
 
-The nodes in the following picture resemple the lower and higher bounds of an interval (the first number will always be lower than the second). Define a function that checks whether such a binary tree is ordered according to the relation *length of interval*.
+The nodes in the following picture resemple the lower and higher bounds of an interval (the first number will always be lower than the second). Define a function that checks whether such a binary tree is ordered according to the relation *subinterval*.
 
 ![Alt text](assets/task11_1.png?raw=true "task11_1.png")
 
@@ -183,18 +183,6 @@ Test cases:
 
     print $ ordered t1 == True
     print $ ordered t2 == False
-
-Explanation *(for t1)*:
-
-If we convert the tree in the form *length of interval*, we get this:
-
-         7
-        / \
-      3    10
-     / \     \
-    1   5     14
-
-The above tree is a binary search tree, so the output has to be "True".
 
 # Task 4
 
