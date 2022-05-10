@@ -4,8 +4,10 @@ main = do
     print $ isSymmetric t3 == False
     print $ isSymmetric t4 == True
     print $ isSymmetric t5 == True
+--     print $ tr t4
 
 data BTree = Empty | Node Int BTree BTree
+ deriving (Show)
 
 t3 :: BTree                         --   1
 t3 = Node 1 (Node 2 Empty Empty)    --  / \
@@ -14,7 +16,7 @@ t3 = Node 1 (Node 2 Empty Empty)    --  / \
 t4 :: BTree                                 --     1
 t4 = Node 1 (Node 2 (Node 3 Empty Empty)    --    / \
                     Empty)                  --   2   2
-            (Node 2 Empty                   --  /     \
+            (Node 2  Empty                 --  /     \
                     (Node 3 Empty Empty))   -- 3       3
 
 t5 :: BTree                                         --       1
@@ -24,3 +26,11 @@ t5 = Node 1 (Node 2 (Node 3 Empty Empty)            --    /     \
             (Node 2 (Node 7 Empty                   -- 3   7   7   3
                             (Node 5 Empty Empty))   --    /     \
                     (Node 3 Empty Empty))           --   5       5
+
+isSymmetric :: BTree -> Bool
+isSymmetric Empty = True
+isSymmetric (Node value left right) = traverseDFS left == (reverse $ traverseDFS right)
+
+traverseDFS :: BTree -> [Int]
+traverseDFS Empty = []
+traverseDFS (Node value left right) = traverseDFS left ++ [value] ++ traverseDFS right
