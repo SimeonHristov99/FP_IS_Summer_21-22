@@ -31,13 +31,24 @@ containsWord (Node value left right) (x:xs)
      helper _ _ = False
 containsWord _ _ = False
 
-genWords' :: (Eq a, Ord a) => BTree a -> [[a]]
-genWords' Nil = [[]]
-genWords' t@(Node value left right) = sort $ filter (containsWord t) $ nub $ concatMap tails $ map (\ x -> value : x ) (genWords' left) ++ [[value]] ++ map (value:) (genWords' right)
-
+-- Solution 1
 traverseDFS Nil = []
 traverseDFS (Node value left right) = traverseDFS left ++ [value] ++ traverseDFS right
 
 genWords :: (Eq a, Ord a) => BTree a -> [[a]]
 genWords t = sort $ filter (\ candidate -> containsWord t candidate) $ subsequences $ sort $ traverseDFS t
 -- genWords t = sort $ filter (containsWord t) $ subsequences $ sort $ traverseDFS t
+
+-- Solution 2
+genWords' :: (Eq a, Ord a) => BTree a -> [[a]]
+genWords' Nil = [[]]
+genWords' t@(Node value left right) = sort $ filter (containsWord t) $ nub $ concatMap tails $ map (\ x -> value : x ) (genWords' left) ++ [[value]] ++ map (value:) (genWords' right)
+
+-- Solution 3
+traverseDFS' :: BTree a -> [[a]]
+traverseDFS' Nil = []
+traverseDFS' (Node value Nil Nil) = [[value]]
+traverseDFS' (Node value left right) = (map (value:) $ traverseDFS' left) ++ (map (value:) $ traverseDFS' right)
+
+genWords'' :: (Ord a) => BTree a -> [[a]]
+genWords'' = sort . nub . filter (not . null) . concatMap tails . traverseDFS'

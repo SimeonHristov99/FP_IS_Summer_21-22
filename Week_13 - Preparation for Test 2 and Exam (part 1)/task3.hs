@@ -44,8 +44,8 @@ traverseDFS (Node value left right) = traverseDFS left ++ [value] ++ traverseDFS
 genWords :: (Eq a, Ord a) => BTree a -> [[a]]
 genWords t = sort $ filter (\ candidate -> containsWord t candidate) $ subsequences $ sort $ traverseDFS t
 
-allContain' :: (Eq a, Ord a) => [BTree a] -> [[a]]
-allContain' = foldl1 (\ xs ys -> intersect xs ys) . map genWords
-
 allContain :: (Eq a, Ord a) => [BTree a] -> [[a]]
 allContain = foldl1 intersect . map genWords
+
+allContain' :: (Eq a, Ord a) => [BTree a] -> [[a]]
+allContain' = foldl1 (\ xs ys -> intersect xs ys) . map genWords

@@ -24,6 +24,7 @@ t2 = Node 'a' (Node 'c' (Node 'd' Nil Nil) Nil) (Node 'b' Nil Nil)
 t3 :: BTree Char
 t3 = Node 'a' (Node 'b' (Node 'd' (Node 'h' Nil Nil) (Node 'i' Nil Nil)) (Node 'e' Nil Nil)) (Node 'c' (Node 'f' Nil Nil) (Node 'g' Nil Nil))
 
+-- Solution 1
 containsWord :: (Eq a) => BTree a -> [a] -> Bool
 containsWord Nil [] = True
 containsWord (Node value Nil Nil) [x] = value == x
@@ -38,15 +39,29 @@ containsWord (Node value left right) (x:xs)
      helper _ _ = False
 containsWord _ _ = False
 
--- containsWord' :: (Eq a) => BTree a -> [a] -> Bool
--- containsWord' Nil [] = True
--- containsWord' Nil (x:xs) = False
--- containsWord' (Node value left right) [] = False
--- containsWord' (Node value Nil Nil) [x] = value == x
--- containsWord' (Node value left right) (x:xs)
---  | value == x = helper left xs || helper right xs
---  | otherwise = containsWord left (x:xs) || containsWord right (x:xs)
---  where
---      helper (Node value Nil Nil) [x] = x == value
---      helper (Node value left right) (x:xs) = value == x && (helper left xs || helper right xs)
---      helper _ _ = False
+-- Solution 2
+containsWord' :: (Eq a) => BTree a -> [a] -> Bool
+containsWord' Nil [] = True
+containsWord' Nil (x:xs) = False
+containsWord' (Node value left right) [] = False
+containsWord' (Node value Nil Nil) [x] = value == x
+containsWord' (Node value left right) (x:xs)
+ | value == x = helper left xs || helper right xs
+ | otherwise = containsWord left (x:xs) || containsWord right (x:xs)
+ where
+     helper (Node value Nil Nil) [x] = x == value
+     helper (Node value left right) (x:xs) = value == x && (helper left xs || helper right xs)
+     helper _ _ = False
+
+-- Solution 3
+containsWord'' :: (Eq a) => BTree a -> [a] -> Bool
+containsWord'' Nil _ = False
+containsWord'' _ [] = False
+containsWord'' (Node c Nil Nil) [x] = c == x
+containsWord'' (Node value left right) w@(x:xs)
+ | value == x = helper left xs || helper right xs
+ | otherwise = containsWord left w || containsWord right w
+ where
+     helper (Node value Nil Nil) [x] = value == x
+     helper (Node value left right) (x:xs) = value == x && (helper left xs || helper right xs)
+     helper _ _ = False
