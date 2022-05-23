@@ -7,3 +7,6 @@ main = do
 data NestedList a = Elem a | List [NestedList a]
  deriving (Eq)
 
+mapNested :: (a -> b) -> (NestedList a) -> (NestedList b)
+mapNested f (Elem x) = Elem (f x)
+mapNested f (List xs) = List (map (mapNested f) xs)
