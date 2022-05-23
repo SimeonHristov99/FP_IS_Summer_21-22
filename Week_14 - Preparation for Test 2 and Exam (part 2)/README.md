@@ -1,4 +1,4 @@
-# Tasks 1, 2, 3, 4
+# Tasks 1, 2, 3
 
 Open and solve `IS_June_2021.pdf`.
 
