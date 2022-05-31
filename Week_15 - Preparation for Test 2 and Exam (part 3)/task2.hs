@@ -8,3 +8,5 @@ main = do
 data Stock = Stock String Int
 
 stocks = [Stock "ABAR" 200, Stock "CDXE" 500, Stock "BKWR" 250, Stock "BTSQ" 890, Stock "DRTY" 600]
+
+stocklist ss xs = [ (code, sum[ n|(Stock m n)<- ss ,head m == code])| code<-xs  ] 
