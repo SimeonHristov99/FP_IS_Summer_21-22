@@ -102,6 +102,8 @@ Here is what the full database looks like:
 
 Define a function that accepts a unary function and a list of numbers [y<sub>1</sub>, y<sub>2</sub> .. y<sub>n</sub>] and returns a function that accepts `x` and calculates the expression: y<sub>1</sub>f(x) + y<sub>2</sub>f(x<sup>2</sup>) + .. + y<sub>n</sub>f(x<sup>n</sup>) .
 
+> **Implementation detail**: Solve the task with `one line` of code and `typeclasses`!
+
 Test cases:
 
 ```haskell
@@ -111,7 +113,9 @@ print $ (sumExpr (*0.8) [0, 1, 2, 3, 4, 5]) 10 == 4345680.0
 
 # Task 2
 
-Define a function that accepts a list of countries and returns the name of the country with the lowest average yearly temperature (the coldest country).
+Define a function that accepts a list of countries and returns the name of the country with the lowest average yearly temperature (the `coldest` country).
+
+> **Implemenation detail**: Solve the task using folding!
 
 Use the following types:
 
@@ -124,8 +128,6 @@ type Elevation = Int
 data City = City Name Elevation AvgYearlyTemperature
 data Country = Country Name Capital [City]
 ```
-
-> **Implemenation detail**: Solve the task using folding!
 
 Test cases:
 

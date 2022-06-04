@@ -154,22 +154,26 @@ Define a function that returns the depth of the shallowest green node.
 
 Use the following types:
 
-    data Color = Red | Green | Blue
-    data Tree = Empty | Node Color Tree Tree
+```haskell
+data Color = Red | Green | Blue
+data Tree = Empty | Node Color Tree Tree
+```
 
-*colorTree*:
+colorTree:
 
-                Blue
-               /    \
-            Red      Red
-            /        /  
-         Green     Blue  
-                   /   \
-                Green  Red
+           Blue
+          /    \
+       Red      Red
+       /        /  
+    Green     Blue  
+              /   \
+           Green  Red
 
 Test case:
 
-    print $ minDepthGreenNode colorTree == 2
+```haskell
+print $ minDepthGreenNode colorTree == 2
+```
 
 # Task 3
 

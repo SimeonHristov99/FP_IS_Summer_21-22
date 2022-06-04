@@ -1,8 +1,8 @@
 # Task 1
 
-Define a function that accepts a unary function and a list of numbers *[y<sub>1</sub>, y<sub>2</sub> .. y<sub>n</sub>]* and returns a function that for every *x* calculates the expression *f(y<sub>1</sub> x) + 2 f(y<sub>2</sub> x) + .. + n f(y<sub>n</sub> x)*.
+Define a function that accepts a unary function and a list of numbers [y<sub>1</sub>, y<sub>2</sub> .. y<sub>n</sub>] and returns a function that for every `x` calculates the expression: f(y<sub>1</sub>x) + 2 f(y<sub>2</sub>x) + .. + n f(y<sub>n</sub>x).
 
-> **Implementation detail**: Solve the task with one line of code!
+> **Implementation detail**: Solve the task with `one line` of code and `typeclasses`!
 
 Test cases:
 
@@ -135,13 +135,15 @@ Test cases:
 
 # Task 6
 
-Define a function that accepts a list of whole number one-argument functions *[f<sub>1</sub>, f<sub>2</sub> .. f<sub>n</sub>]* and returns a function that for every *x* calculates the composition of the functions with odd indices: *f<sub>1</sub>(f<sub>3</sub>(...(f<sub>n</sub>x)...))*.
+Define a function that accepts a list of whole number unary functions [f<sub>1</sub>, f<sub>2</sub> .. f<sub>n</sub>] and returns a function that for every `x` calculates the composition of the functions with odd indices: f<sub>1</sub>(f<sub>3</sub>(...(f<sub>n</sub>x)...)).
 
 > **Implementation detail**: Solve the task with one line of code using folding.
 
 Test case:
 
-    print $ (getOddCompositionValue [(\x -> x + 1),(\x -> x * 2),(\x -> x - 1), (\x -> div x 2)]) 2 == 2
+```haskell
+print $ (getOddCompositionValue [(\x -> x + 1),(\x -> x * 2),(\x -> x - 1), (\x -> div x 2)]) 2 == 2
+```
 
 # Task 7
 

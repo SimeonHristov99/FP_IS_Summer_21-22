@@ -39,15 +39,12 @@ Test cases:
 
 # Task 3
 
-Define a function that accepts a one-argument function *f* and a number *y* and returns a one-argument function that for every *x* returns:
+Define a function that accepts a unary function `f` and a number `y` and returns a unary function that for every `x` returns:
 
-- *y*, if it is greater than or equal to the result of applying *f* to *x*;
-- the result of applying *f* to *x*, otherwise.
+- `y`, if it is greater than or equal to the result of applying `f` to `x`;
+- the result of applying `f` to `x`, otherwise.
 
-Implementation details:
-
-    Solve the task with one line of code!
-    Initially use Double, but then transition to all number types.
+> **Implementation detail**: Solve the task with `one line` of code and `typeclasses`!
 
 Test cases:
 
