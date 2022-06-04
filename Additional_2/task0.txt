@@ -1,0 +1,76 @@
+1. Характеризирайте накратко структурата от данни „опашка“.
+    Topic 9, slides: ???.
+
+2. Опишете накратко стратегията за търсене на път в граф в дълбочина (depth-first search).
+    Topic 10, slides: ???.
+
+    Look at the picture of a graph. Answer the questions, then perform DFS and BFS from S to either G1, G2, G3.
+
+    What is a node?
+    What is a graph?
+    What is an edge?
+    What is an arc?
+    What is a tree?
+    What is a leaf?
+    What is a parent?
+    What is a root?
+    DFS is implemented using [ stack | queue ]?
+    BFS is implemented using [ stack | queue ]?
+
+    DFS Answer: ???
+    BFS Answer: ???
+
+3. Обяснете понятието „алгебричен тип“ в езика Haskell. Дайте два примера за дефиниции на
+различни видове алгебрични типове.
+    Topic 11, slides: ???, examples: ???.
+
+4. Дайте пример за дефиниция на алгебричен тип като производен екземпляр на множество
+класове. Обяснете накратко значението на тази дефиниция.
+    Topic ???, slides: ???
+        - explanations for Eq, Show, Ord, Read
+        - show task0.hs
+
+5. Обяснете понятието „полиморфна функция“. Дайте два примера за полиморфни функции в
+езика Haskell.
+    Topic ???, slides: ???
+        - example1: ???
+        - example2: ???
+        - generic functions:
+            - example1: ???
+            - example2: ???
+
+6. Как се дефинират класове в Haskell? Дайте пример за дефиниция на клас.
+    Topic ???, slides: ???, example: ???.
+        - WRONG: колекция   от   типове,   за   които   се   поддържа   множество додефинирани операции, наречени методи.
+
+7. Обяснете същността на „мързеливото“ оценяване (lazy evaluation) в езика Haskell. Дайте поне два примера, които
+илюстрират различни аспекти на „мързеливото“ оценяване.
+    Topic ???
+        - slides: ???
+        - example1: take 5 [0 .. ] and slides 5,6 (evaluate when needed)
+        - example2: slides 7,8 (don't evaluate duplicated arguments)
+        - show example in task0.hs (evaluate when needed)
+
+8. Структурна индукция.
+    Topic 14
+    - They key here is to look at these equations not as code, but as two sides that have to be equalized.
+    - First, prove slide 4.
+
+Task 8.1.
+
+sum :: [Int] -> Int
+sum [] = 0
+sum (x:xs) = x + sum xs
+
+doubleAll :: [Int] -> [Int]
+doubleAll [] = []
+doubleAll (z:zs) = 2*z : doubleAll zs
+
+prove that for every xs: sum (doubleAll xs) = 2*sum xs
+
+Task 8.2.
+
+f [] ys = ys
+f (x:xs) ys = x : (f xs ys)
+
+prove that for every ys: f ys [] = ys
