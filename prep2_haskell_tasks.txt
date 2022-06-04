@@ -1,0 +1,8 @@
+task 01: Week06 -> Task01 (in class)
+task 02: Week10 -> Task01 (for home)
+task 03: Week05 -> Task03 (for home)
+task 04: Week06 -> Task06 (in class)
+task 05: Week11 -> Task02 (for home)
+task 06: Week12 -> Task03 (for home)
+task 07: Week10 -> Task02 (for home)
+task 08: Week12 -> Task02 (for home)
