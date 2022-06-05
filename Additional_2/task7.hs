@@ -10,3 +10,7 @@ type Elevation = Int
 data City = City Name Elevation AvgYearlyTemperature
 data Country = Country Name Capital [City]
   
+coldestCapital :: [Country] -> Capital
+coldestCapital cs = fst $  foldl1 (\ c1@(n1, t1) c2@(n2, t2) -> if t1 <= t2 then c1 else c2) [ (name, getAvg [ t | (City _ _ t) <- cities ]) | (Country name _ cities) <- cs ]
+ where
+     getAvg ts = sum ts / (fromIntegral $ length ts)

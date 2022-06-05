@@ -1,8 +1,8 @@
 1. Характеризирайте накратко структурата от данни „опашка“.
-    Topic 9, slides: ???.
+    Topic 9, slides: 18, 19, 20.
 
 2. Опишете накратко стратегията за търсене на път в граф в дълбочина (depth-first search).
-    Topic 10, slides: ???.
+    Topic 10, slides: 22, 23.
 
     Look at the picture of a graph. Answer the questions, then perform DFS and BFS from S to either G1, G2, G3.
 
@@ -14,39 +14,46 @@
     What is a leaf?
     What is a parent?
     What is a root?
-    DFS is implemented using [ stack | queue ]?
-    BFS is implemented using [ stack | queue ]?
+    DFS is implemented using [ stack | queue ]? stack
+    BFS is implemented using [ stack | queue ]? queue
 
-    DFS Answer: ???
-    BFS Answer: ???
+    DFS Answer: S A B C F D E G3
+    BFS Answer: S A G1
 
 3. Обяснете понятието „алгебричен тип“ в езика Haskell. Дайте два примера за дефиниции на
 различни видове алгебрични типове.
-    Topic 11, slides: ???, examples: ???.
+    Topic 11, slides: 2, 3, examples: 3, 7, 10, 11.
 
 4. Дайте пример за дефиниция на алгебричен тип като производен екземпляр на множество
 класове. Обяснете накратко значението на тази дефиниция.
-    Topic ???, slides: ???
+    Topic 11, slides: 20
         - explanations for Eq, Show, Ord, Read
         - show task0.hs
 
 5. Обяснете понятието „полиморфна функция“. Дайте два примера за полиморфни функции в
 езика Haskell.
-    Topic ???, slides: ???
-        - example1: ???
-        - example2: ???
+    Topic 12, slides: 2
+        - example1: length
+        - example2: zip
         - generic functions:
-            - example1: ???
-            - example2: ???
+            - example1: f
+            - example2: sum
+
+-----
+Полиморфна функция е всяка функция, която работи за всеки тип на своите параметри.
+
+пример 1: length
+пример 2: zip
+-----
 
 6. Как се дефинират класове в Haskell? Дайте пример за дефиниция на клас.
-    Topic ???, slides: ???, example: ???.
+    Topic 12, slides: 10, 12, 13, example: 14.
         - WRONG: колекция   от   типове,   за   които   се   поддържа   множество додефинирани операции, наречени методи.
 
 7. Обяснете същността на „мързеливото“ оценяване (lazy evaluation) в езика Haskell. Дайте поне два примера, които
 илюстрират различни аспекти на „мързеливото“ оценяване.
-    Topic ???
-        - slides: ???
+    Topic 13
+        - slides: 2
         - example1: take 5 [0 .. ] and slides 5,6 (evaluate when needed)
         - example2: slides 7,8 (don't evaluate duplicated arguments)
         - show example in task0.hs (evaluate when needed)
@@ -68,9 +75,45 @@ doubleAll (z:zs) = 2*z : doubleAll zs
 
 prove that for every xs: sum (doubleAll xs) = 2*sum xs
 
+1. Доказваме, че е вярно за [], т.е. P([])
+
+sum (doubleAll []) = 2*sum []
+sum [] = 2*sum []
+0 = 2*sum []
+0 = 2*0
+0 = 0
+
+Вярно за [].
+
+2. Приемаме, че е изпълнено за P(xs), т.е. sum (doubleAll xs) = 2*sum xs.
+Проверяваме за (x:xs)
+
+sum (doubleAll (x:xs)) = 2*sum (x:xs)
+sum (2*x : doubleAll xs) = 2*sum (x:xs)
+2 * x + sum (doubleAll xs) = 2*sum (x:xs)
+2*x + 2*sum xs = 2*sum (x:xs)
+2*x + 2*sum xs = 2*(x + sum xs)
+2*x + 2*sum xs = 2*x + 2*sum xs
+
+Вярно за (x:xs). Следователно е изпълнено: sum (doubleAll xs) = 2*sum xs, за всяко xs.
+
 Task 8.2.
 
 f [] ys = ys
 f (x:xs) ys = x : (f xs ys)
 
 prove that for every ys: f ys [] = ys
+
+1. Доказваме, че е вярно за [], т.е. P([])
+
+f [] [] = []
+[] = []
+
+Вярно за [].
+
+2. Приемаме, че е изпълнено за P(xs), т.е. f ys [] = ys.
+Проверяваме за (y:ys)
+
+f (y:ys) [] = (y:ys)
+y : f ys [] = (y:ys)
+(y:ys) = (y:ys)
